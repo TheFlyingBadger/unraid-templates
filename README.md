@@ -28,4 +28,5 @@ CURL_TIMEOUT=30 # --max-time seconds for curl requests to Docker API
 **Optional Container Labels**
 
 Override (per container - in seconds) to stop timeout occuring during container restart
+
 `autoheal.stop.timeout=20`
