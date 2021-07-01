@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+  <Icon>https://github.com/TheFlyingBadger/unraid-templates/raw/main/icons/badger.jpg</Icon>
+  <Profile>
+    Docker containers which I find useful!
+  </Profile>
+  <DonateLink>https://paypal.me/flyingbadger</DonateLink>
+  <DonateText>If you like my work please consider Donating.</DonateText>
+</Maintainer>

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>autoheal</Name>
+  <Repository>willfarrell/autoheal</Repository>
+  <Registry>https://hub.docker.com/r/willfarrell/autoheal</Registry>
+  <Network>none</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://hub.docker.com/r/willfarrell/autoheal</Project>
+  <Overview>Monitor and restart unhealthy docker containers&#xD;
+&#xD;
+&#xD;
+Apply the label autoheal=true to your container to have it watched.&#xD;
+&#xD;
+Note: You must apply HEALTHCHECK to your docker images first. See https://docs.docker.com/engine/reference/builder/#healthcheck for details.&#xD;
+&#xD;
+</Overview>
+  <Category>Tools:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://github.com/TheFlyingBadger/unraid-templates/raw/main/icons/autoheal.png</Icon>
+  <ExtraParams>--restart=always</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1625150717</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Monitor and restart unhealthy docker containers&#xD;
+&#xD;
+&#xD;
+Apply the label autoheal=true to your container to have it watched.&#xD;
+&#xD;
+Note: You must apply HEALTHCHECK to your docker images first. See https://docs.docker.com/engine/reference/builder/#healthcheck for details.&#xD;
+&#xD;
+</Description>
+  <Networking>
+    <Mode>none</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/etc/localtime</HostDir>
+      <ContainerDir>/etc/localtime</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>all</Value>
+      <Name>AUTOHEAL_CONTAINER_LABEL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>5</Value>
+      <Name>AUTOHEAL_INTERVAL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>AUTOHEAL_START_PERIOD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>10</Value>
+      <Name>AUTOHEAL_DEFAULT_STOP_TIMEOUT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>30</Value>
+      <Name>CURL_TIMEOUT</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Autoheal Container Label" Target="AUTOHEAL_CONTAINER_LABEL" Default="all" Mode="" Description="set to 'all' to watch all running containers" Type="Variable" Display="always" Required="true" Mask="false">all</Config>
+  <Config Name="Autoheal Interval" Target="AUTOHEAL_INTERVAL" Default="5" Mode="" Description="check every n seconds" Type="Variable" Display="advanced" Required="true" Mask="false">5</Config>
+  <Config Name="Autoheal Start Period" Target="AUTOHEAL_START_PERIOD" Default="0" Mode="" Description="wait n seconds before first health check" Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
+  <Config Name="Default Stop Timeout " Target="AUTOHEAL_DEFAULT_STOP_TIMEOUT" Default="10" Mode="" Description="Docker waits max 10 seconds (the Docker default) for a container to stop before killing during restarts (container overridable via label, autoheal.stop.timeout=20 )" Type="Variable" Display="advanced" Required="true" Mask="false">10</Config>
+  <Config Name="curl Timeout" Target="CURL_TIMEOUT" Default="30" Mode="" Description="max-time seconds for curl requests to Docker API" Type="Variable" Display="advanced" Required="true" Mask="false">30</Config>
+  <Config Name="localtime" Target="/etc/localtime" Default="/etc/localtime" Mode="ro" Description="Container Path: /etc/localtime" Type="Path" Display="advanced" Required="true" Mask="false">/etc/localtime</Config>
+  <Config Name="docker.sock" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="Container Path: /var/run/docker.sock" Type="Path" Display="advanced" Required="true" Mask="false">/var/run/docker.sock</Config>
+</Container>
