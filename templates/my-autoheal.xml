@@ -79,11 +79,11 @@ Note: You must apply HEALTHCHECK to your docker images first. See https://docs.d
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Autoheal Container Label" Target="AUTOHEAL_CONTAINER_LABEL" Default="all" Mode="" Description="set to 'all' to watch all running containers" Type="Variable" Display="always" Required="true" Mask="false">all</Config>
-  <Config Name="Autoheal Interval" Target="AUTOHEAL_INTERVAL" Default="5" Mode="" Description="check every n seconds" Type="Variable" Display="advanced" Required="true" Mask="false">5</Config>
-  <Config Name="Autoheal Start Period" Target="AUTOHEAL_START_PERIOD" Default="0" Mode="" Description="wait n seconds before first health check" Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
-  <Config Name="Default Stop Timeout " Target="AUTOHEAL_DEFAULT_STOP_TIMEOUT" Default="10" Mode="" Description="Docker waits max 10 seconds (the Docker default) for a container to stop before killing during restarts (container overridable via label, autoheal.stop.timeout=20 )" Type="Variable" Display="advanced" Required="true" Mask="false">10</Config>
-  <Config Name="curl Timeout" Target="CURL_TIMEOUT" Default="30" Mode="" Description="max-time seconds for curl requests to Docker API" Type="Variable" Display="advanced" Required="true" Mask="false">30</Config>
+  <Config Name="Autoheal Container Label" Target="AUTOHEAL_CONTAINER_LABEL" Default="all" Mode="" Description="set to 'all' to watch all running containers" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+  <Config Name="Autoheal Interval (seconds)" Target="AUTOHEAL_INTERVAL" Default="5" Mode="" Description="check every 'n' seconds" Type="Variable" Display="advanced" Required="true" Mask="false">5</Config>
+  <Config Name="Autoheal Start Period (seconds)" Target="AUTOHEAL_START_PERIOD" Default="0" Mode="" Description="wait 'n' seconds before first health check" Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
+  <Config Name="Default Stop Timeout (seconds)" Target="AUTOHEAL_DEFAULT_STOP_TIMEOUT" Default="10" Mode="" Description="Docker waits max 'n' seconds (the Docker default) for a container to stop before killing during restarts (container overridable via label, autoheal.stop.timeout=20 )" Type="Variable" Display="advanced" Required="true" Mask="false">10</Config>
+  <Config Name="curl Timeout (seconds)" Target="CURL_TIMEOUT" Default="30" Mode="" Description="max-time seconds for curl requests to Docker API" Type="Variable" Display="advanced" Required="true" Mask="false">30</Config>
   <Config Name="localtime" Target="/etc/localtime" Default="/etc/localtime" Mode="ro" Description="Container Path: /etc/localtime" Type="Path" Display="advanced" Required="true" Mask="false">/etc/localtime</Config>
   <Config Name="docker.sock" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="Container Path: /var/run/docker.sock" Type="Path" Display="advanced" Required="true" Mask="false">/var/run/docker.sock</Config>
 </Container>
