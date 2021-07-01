@@ -6,13 +6,13 @@ XML Templates for Unraid
 
 The excellent [willfarrell/autoheal](https://hub.docker.com/r/willfarrell/autoheal) container which (in the absence of Docker native support for it) will restart any docker containers which find themselves in an "unhealthy" state.
 
-**a)** Apply the label autoheal=true to your container to have it watched.
+**a)** Apply the label `autoheal=true` to your container to have it watched.
 
 **b)** Set ENV `AUTOHEAL_CONTAINER_LABEL=all` to watch all running containers.
 
 **c)** Set ENV `AUTOHEAL_CONTAINER_LABEL` to existing label name that has the value true.
 
-Note: You must apply HEALTHCHECK to your docker images first. See https://docs.docker.com/engine/reference/builder/#healthcheck for details.
+Note: You must apply HEALTHCHECK to your docker images first. See [Docker doco](https://docs.docker.com/engine/reference/builder/#healthcheck) for details.
 
 **ENV Defaults**
 
