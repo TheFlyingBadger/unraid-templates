@@ -14,9 +14,9 @@ The excellent [willfarrell/autoheal](https://hub.docker.com/r/willfarrell/autohe
 
 Note: You must apply HEALTHCHECK to your docker images first. See https://docs.docker.com/engine/reference/builder/#healthcheck for details.
 
-### ENV Defaults
+**ENV Defaults**
 
-```
+```env
 AUTOHEAL_CONTAINER_LABEL=autoheal
 AUTOHEAL_INTERVAL=5 # check every 5 seconds
 AUTOHEAL_START_PERIOD=0 # wait 0 seconds before first health check
@@ -25,6 +25,6 @@ DOCKER_SOCK=/var/run/docker.sock # Unix socket for curl requests to Docker API
 CURL_TIMEOUT=30 # --max-time seconds for curl requests to Docker API
 ```
 
-### Optional Container Labels
+**Optional Container Labels**
 
 `autoheal.stop.timeout=20` # Per containers override for stop timeout seconds during restart
