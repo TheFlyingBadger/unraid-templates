@@ -4,7 +4,7 @@ XML Templates for Unraid
 
 ## autoheal
 
-The excellent [Docker Hub](https://hub.docker.com/r/willfarrell/autoheal) container which (in the absence of Docker native support for it) will restart any docker containers which find themselves in an "unhealthy" state.
+The excellent [willfarrell/autoheal](https://hub.docker.com/r/willfarrell/autoheal) container which (in the absence of Docker native support for it) will restart any docker containers which find themselves in an "unhealthy" state.
 
 **a)** Apply the label autoheal=true to your container to have it watched.
 
